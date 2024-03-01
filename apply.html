@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お花の定期便 Belle Fleur</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.ico">
+    <meta name="keywords" content="お花の定期便">
+    <meta name="description" content="お花の定期便"><!--ページの内容を表す文章-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--css-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+
+</head>
+
+  <body>
+    
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.jpg" alt="ロゴ">
+        </a>
+      </div>
+
+      <div class="for-scroll"></div>
+      <div id="js-scroll-top" class="scroll-top">TOP</div>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="price.html">PRICE</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="apply.html">お申込み</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+    </header>
+
+
+    <main>
+      <div class="subvisual">
+        <img class="subimage" src="images/about.jpg" loading="lazy" alt="サブビジュアル">
+      </div>
+
+      <section class="wrapper fadeUpTrigger" id="applyForm">
+              <h2 class="section-title">
+                <span class="en">Apply</span>
+                <span class="ja">お申込みフォーム</span>
+              </h2>
+
+      
+             <div>
+                  <p class="text">下記のフォームよりお申込みください。詳細について折り返しご連絡させていただきます。</p>
+                  <p class="contactline"></p>
+
+                  <p class="contactType">お申込みフォーム</p>
+                  <form id="mainForm">
+                      <table>
+                         <tbody>
+                              <tr>
+                                <th>Name <span class="small">※必須</span></th>
+                                <td><input class="inputArea" type="text" required/></td>
+                              </tr>
+                              <tr>
+                                <th>Email <span class="small">※必須</span></th>
+                                <td><input class="inputArea" type="text" required/></td>
+                              </tr>
+                              <tr>
+                                <th>Adress <span class="small">※必須</span></th>
+                                <td><input class="inputArea" type="text" required/></td>
+                              </tr>
+                              <tr>
+                                <th>Tel <span class="small">※必須</span></th>
+                                <td><input class="inputArea" type="text"/></td>
+                              <!--<td><input class="inputArea" type="text" placeholder="半角でご入力ください"/></td>-->
+                              </tr>
+                              <tr>
+                                <th>Type <span class="small">※必須</span></th>
+                                <td><select name="Type">
+                                        <option value="選択してください">選択してください</option>
+                                        <option value="体験コース">体験コース</option>
+                                        <option value="レギュラーコース">レギュラーコース</option>
+                                        <option value="リッチコース">リッチコース</option>
+                                        <option value="プレゼントコース">プレゼントコース</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>Message </th>
+                                <td><textarea name="お問い合わせ内容" required ></textarea></td>
+                              </tr>
+                         </tbody>
+                       </table>
+
+                        <div id="mainFormBtn">
+                          <input class="inputSend" type="submit" value="Apply" />
+                        </div>
+                  </form>
+              </div>
+      </section>
+         
+
+    </main>
+
+
+    <footer id="footer">
+      <div class="wrapper">
+        <div class="flex">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.jpg" alt="ロゴ">
+            </a>
+          </div>
+          <div class="info">
+            <p>
+              Belle Fleur<br>
+              22-1 Ekimae honcho<br>
+              Kawasaki City<br>
+              Kanagawa, Japan 201-0007
+            </p>
+            <p>045-244-31XX</p>
+          </div>
+        </div>
+        <p class="copyright">&copy;Belle Fleur</p>
+      </div>
+    </footer>
+    <script src="JavaScript/jquery-3.4.1.min.js"></script>
+    <script src="JavaScript/script.js"></script>
+  </body>
+</html>

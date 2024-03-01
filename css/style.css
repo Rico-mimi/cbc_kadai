@@ -1,0 +1,1001 @@
+@charset "utf-8";
+
+
+  html {
+    font-size: 1.2rem;
+    font-family: 'Zen Old Mincho', serif;
+
+  }
+  body {
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 0.875rem;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  li {
+    list-style: none;
+  }
+  
+  .logo {
+    width: 120px;
+    line-height: 1;
+    margin-right: 60px;
+  }
+  .logo a {
+    display: block;
+  }
+  .section-title {
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+  /*
+  サブページのサブ画像の設定
+   */
+  .subvisual .subimage{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+  }
+
+  /*
+  疑似要素を使って下線を引く
+  */
+  .section-title::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    display: block;
+  }
+  /*
+  「display: inline-block;」を設定してブロック化することで、
+  改行されてmargin-bottomが使用できるようになる
+  */
+  .section-title .en {
+    display: block;
+    font-size: 2.25rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+  }
+  .section-title .ja {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 36px;
+  }
+  /*
+  横幅を設定するための共通クラス
+  */
+  .wrapper {
+    width: 100%;
+    max-width: 1032px;
+    /*padding: 0 16px;*/
+    margin: 0 auto;
+  }
+
+
+  .toplinks a:hover{
+    color: #800080;
+
+  }
+
+
+      /* fadeUp */
+
+.fadeUp1{
+  animation-name:fadeUpAnime;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+  .fadeUpTrigger{
+    opacity: 0;
+   }  
+
+
+/* topに戻るボタン */ 
+   .for-scroll{
+     height: 1500px;
+   }
+   
+   .scroll-top {
+     position: fixed;
+     right: 25px;
+     bottom: 25px;
+     z-index: 100;
+     background-color: #800080;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     color: #fff;
+     line-height: 50px;
+     text-align: center;
+   }
+   .scroll-top:hover {
+     cursor: pointer;
+     opacity: 0.7;
+   }
+
+
+  
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #fff0f5; 
+  }
+
+  .header .nav-links{
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .header .nav-links li{
+    margin-right: 30px;
+    font-size: 0.8rem;
+  }
+
+  .header .nav-links a {
+    background-image: linear-gradient(90deg,#800080,#800080);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 0 2px;
+    transition: background-size 0.6s;
+
+  }
+
+  .header .nav-links a:hover{
+  background-size: 100% 2px;
+  }
+  
+
+  .header .burger {
+    display: none;
+    cursor: pointer;
+  }
+  .header .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #800080;
+    margin: 5px;
+    transition: 0.5s ease;
+  }
+
+  .header .nav-active {
+    transform: translateX(0%) !important;
+  }
+
+
+  
+
+  /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+  #mainvisual {
+    margin-bottom: 120px;
+  }
+
+  #mainvisual img {
+    width: 100%;
+    max-height: 900px; 
+      object-fit: cover;  /* 横幅は画面サイズにあわせて伸縮 */
+      max-width: 1920px;  /* 画像の横幅サイズにあわせて最大幅を指定 */
+  }
+  
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  .news {
+    margin-bottom: 120px;
+
+  }
+  .news .list {
+    display: flex;
+    justify-content: space-between;
+  }
+  /*
+  「width: calc(100%/3);」で横幅を3等分する
+  */
+  .news .list li {
+    width: calc(100%/3);
+    border-right: solid 1px #000;
+    padding: 10px 20px;
+  }
+  .news .list li:first-child {
+    padding-left: 0;
+  }
+  .news .list li:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .news .list li .date-area {
+    margin-bottom: 16px;
+  }
+  .news .list li .date-area span {
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #800080;
+    color: #fff;
+    display: inline-block;
+    font-size: 0.75rem;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .news #insta:hover{
+    color: #800080; 
+  }
+
+  .news #continue{
+    margin-top: 50px;
+  }
+
+  .news #continue a{
+    text-decoration: underline;
+  }
+
+  .news #continue a:hover{
+    opacity: 0.7;
+  }
+
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  .about {
+    display: flex;
+    margin-bottom: 120px;
+  }
+  .about .img {
+    width: 55%;
+  }
+  .about .img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .about .text {
+    width: 45%;
+    padding-top: 180px;
+  }
+  .about .text p {
+    padding-left: 15px; 
+    line-height: 2.2;
+  }
+
+
+  
+  /*-------------------------------------------
+  course
+  -------------------------------------------*/
+  #course {
+    margin-bottom: 120px;
+  }
+  #course .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+  #course .flex .left {
+    width: 46%;
+    margin-top: 100px;
+  }
+  #course .flex .right {
+    width: 46%;
+  }
+  #course .flex .item {
+    margin-bottom: 50px;
+  }
+  #course .flex .item:last-child {
+    margin-bottom: 0;
+  }
+  #course .flex .title {
+    font-weight: bold;
+    margin: 0 0 10px 18px;
+    position: relative;
+    padding-left: 5px;
+  }
+  /*
+  疑似要素でタイトルの横線を引く
+  */
+  #course .flex .title::before {
+    content: "";
+    width: 8px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: -18px;
+    margin-left: 10px;
+  }
+
+  #course .price{
+    padding-left: 30px;
+    color: #800080;
+
+  }
+  
+  /*-------------------------------------------
+  shopinfo
+  -------------------------------------------*/
+  /*
+  テキストと画像はpositionを使って配置
+  子要素の「position: absolute;」で高さがなくなるため、
+  「height: 750px;」を指定して高さを確保
+  */
+  .shopinfo {
+    height: 820px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .shopinfo .text {
+    width: 55%;
+    background-color: #fff;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .shopinfo .img {
+    width: 53%;
+    position: absolute;
+    top: 115px;
+    right: 0;
+  }
+  .shopinfo .img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .shopinfo .info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 30px;
+  }
+  .shopinfo .info dt {
+    width: 20%;
+    margin-top: 10px;
+  }
+  /*
+  1つめのdtにはmargin-topを設定しない
+  */
+  .shopinfo .info dt:first-of-type {
+    margin-top: 0;
+  }
+  .shopinfo .info dd {
+    width: 80%;
+    margin-top: 10px;
+  }
+  /*
+  1つめのddにはmargin-topを設定しない
+  */
+  .shopinfo .info dd:first-of-type {
+    margin-top: 0;
+  }
+  .shopinfo .info .add {
+    margin-left: 20%;
+  }
+  
+  /*-------------------------------------------
+  footer
+  -------------------------------------------*/
+  #footer {
+    background-color: #fff0f5;
+    padding-bottom: 20px;
+  }
+  #footer .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+  }
+  #footer .flex .logo {
+    margin-right: 0;
+  }
+  #footer .copyright {
+    font-size: 0.625rem;
+  }
+
+  /*-------------------------------------------
+  FAQ
+  -------------------------------------------*/
+
+  #faq .accordion{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    max-width: 900px;
+    position: relative;
+    width: 100%;
+  }
+
+  #faq .accordion-title{
+    color: #000000;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+  }
+
+  #faq .accordion-content{
+   display: none;
+   padding: 10px 20px;
+  } 
+
+  #faq .accordion-content p{
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #faq .accordion-item .accordion-title{
+    background-color: #ffb6c1;
+  }
+
+  #faq .accordion-content{
+    border-bottom: 2px solid #ffb6c1;
+    border-left: 2px solid #ffb6c1;
+    border-right: 2px solid #ffb6c1;
+  }
+
+  #faq .accordion-title{
+    position: relative;
+  }
+
+  #faq .accordion-title::after{
+    border-right: solid 2px #000000;
+    border-top: solid 2px #000000;
+    content:"";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right:25px;
+    top: 38%;
+    transform: rotate(135deg);
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: 8px;
+  }
+/*openがついたら→を回転させる*/
+  #faq .accordion-title.accordion-title.open::after {
+    top: 45%;
+    transform:rotate(-45deg);
+  }
+
+    /*-------------------------------------------
+  Price page
+  -------------------------------------------*/
+ #price #pricetable{
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  margin-left: 10px;
+ }
+
+ #price #pricetable .table{
+  position: relative;
+ }
+
+#price #pricetable .try{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #228b22;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 0.7rem;
+  box-shadow: 1px 1px 1px 1px #bbb;
+
+}
+
+#price #pricetable #table1 .maru{
+  color: #ffffff;
+}
+
+#price table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#price table th{
+  background-color: #ffb6c1;
+}
+
+#price table td{
+  vertical-align: middle ;
+  text-align: center;
+}
+
+#price .table{
+  margin: 15px;
+  font-size: 0.7rem;
+}
+
+#price .table-commenttitle{
+  font-size: 0.8rem;
+}
+
+#price .table-comment{
+  font-size: 0.7rem;
+}
+
+#price caption{
+  font-size: 1.5rem;
+}
+
+
+/****************************************
+
+ aboutpage                                                                            
+
+*****************************************/
+#outline{
+  display: flex;
+  justify-content: space-around;
+  text-decoration: underline;
+}
+#outline li a:hover{
+  color: #800080;
+}
+
+.aboutpage{
+  line-height: 2.2;
+
+}
+
+/****************************************
+
+ apply                                                                             
+
+*****************************************/
+#applyForm .text{
+  font-size: 0.8rem;
+  text-align: left;
+  padding-bottom: 20px;
+  width: 100%;
+
+}
+
+#applyForm .contactType{
+  padding: 50px 90px 50px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+#applyForm .contactline {
+  height: 1px;
+  border: none;
+  background-color: #E1E1E1;
+}
+
+#applyForm #mainForm {
+width: 700px;
+height:auto;
+margin:0 auto;
+padding:0 40px;
+}
+
+#applyForm #mainForm table {
+  width:100%;
+}
+
+#applyForm #mainForm th {
+  height:50px;
+  padding:10px 5px;
+  text-align: left;
+}
+
+#applyForm #mainForm td {
+  height:50px;
+}
+
+#applyForm .inputArea {
+  min-height:40px;
+  padding:3px 0 3px 5px;
+  background-color: #dddcdc;
+  border: none;  
+  font-size: 15px;
+  width: 80%;
+
+} 
+
+#applyForm .small {
+  color:#800080;
+  font-size: 9px;
+}
+
+#applyForm select {
+  width:407px;
+  min-height:40px;
+  color: #818181;
+  font-size: 12px;
+  padding:3px 0 3px 5px;
+  background-color: #dddcdc;
+  border: none;  
+}
+
+#applyForm textarea {
+  width:80%;
+  min-height:100px;
+  color: #818181;
+  font-size: 12px;
+  margin:10px 0 0;
+  padding:3px 0 3px 5px;
+  background-color: #dddcdc;
+  border: none;  
+}
+
+#applyForm .inputSend {
+  width:150px;
+  height: 50px;
+  margin:10px 0px 10px 0;
+  background-color: #adacac;
+  color: #fff;
+  border: none;
+}
+
+#applyForm .inputSend a:hover {
+  background-color: #fff;
+}
+
+#applyForm input {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+#applyForm #mainFormBtn{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+
+
+
+  
+  /*-------------------------------------------
+  SP
+  -------------------------------------------*/
+  @media screen and (max-width: 900px) {
+    .logo {
+      /* width: 80px;*/
+      margin: 8px 0;
+    }
+    .section-title {
+      margin-bottom: 34px;
+    }
+    .section-title .ja {
+      margin-bottom: 24px;
+    }
+  
+    /*-------------------------------------------
+    ヘッダー
+    -------------------------------------------*/
+    body{
+      /*width:900px;*/
+      overflow-x: hidden;
+      width:100%;
+
+    }
+
+    .header .nav-links{
+      position: fixed;
+      left: 0;
+      height: 50%;
+      top: 80px;
+      opacity: 1;
+      background-color: #fff0f5;
+      margin-top: 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      transform:translateX(100%) ;
+      z-index: 100;
+    }
+
+    .header .nav-links li{
+      opacity: 0 ;
+    }
+
+    .header .burger{
+      display: block;
+      padding-right: 20px;
+    }
+
+    @keyframes navLinksFade {
+      0% {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(405deg) translate(-5px, -6px);
+    }
+    
+    
+
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #mainvisual {
+      width: 100%;
+      margin-bottom: 80px;
+    }
+  
+    /*-------------------------------------------
+    News
+    -------------------------------------------*/
+    .news {
+      margin-bottom: 80px;
+    }
+    .news .list {
+      flex-direction: column;
+    }
+    .news .list li {
+      width: 100%;
+      border-right: none;
+      padding: 10px 0;
+      margin-bottom: 20px;
+    }
+    .news .list li:last-child {
+      margin-bottom: 0;
+    }
+  
+    /*-------------------------------------------
+    About
+    -------------------------------------------*/
+    .about {
+      flex-direction: column;
+      margin-bottom: 80px;
+    }
+    .about .img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .about .img img {
+      height: 300px;
+    }
+    .about .text {
+      width: 100%;
+      padding-top: 0;
+    }
+  
+    /*-------------------------------------------
+    Course
+    -------------------------------------------*/
+    #course {
+      margin-bottom: 80px;
+    }
+    #course .flex {
+      flex-direction: column;
+      padding: 0;
+    }
+    #course .flex .left {
+      width: 100%;
+      margin: 0 0 30px 0;
+    }
+    #course .flex .right {
+      width: 100%;
+    }
+    #course .flex .item {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #course .flex .title {
+      text-align: left;
+    }
+
+    #course p{
+      padding-left: 20px;
+    }
+
+    
+  
+    /*-------------------------------------------
+    shopinfo
+    -------------------------------------------*/
+    /*
+    「position: static;」でrelativeを解除
+    */
+    .shopinfo {
+      height: auto;
+      flex-direction: column;
+      position: static;
+    }
+    /*
+    「position: static;」でabsoluteを解除
+    */
+    .shopinfo .text {
+      width: 100%;
+      padding-top: 80px;
+      margin-bottom: 20px;
+      position: static;
+    }
+    /*
+    「position: static;」でabsoluteを解除
+    */
+    .shopinfo .img {
+      width: 100%;
+      padding: 0;
+      position: static;
+    }
+    .shopinfo .info {
+      flex-direction: column;
+    }
+    .shopinfo .info dt {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .shopinfo .info dd {
+      /*width: 100%;*/
+      margin-top: 5px;
+      padding-left: 14px;
+    }
+    .shopinfo .info dd:first-of-type {
+      margin-top: 5px;
+    }
+    .shopinfo .info .add {
+      margin-left: 0;
+    }
+  
+    /*-------------------------------------------
+    footer
+    -------------------------------------------*/
+    #footer .flex {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    #footer .flex .logo {
+      margin-bottom: 10px;
+    }
+    #footer p{
+      padding-left: 20px;
+    }
+
+
+    /*-------------------------------------------
+    Price page
+    -------------------------------------------*/
+    #price #pricetable{
+      display: flex;
+      flex-direction: column;
+     /* width: 90%;*/
+      text-align: left;
+      margin: 10px;
+    }
+
+/****************************************
+
+ aboutpage                                                                            
+
+*****************************************/
+
+.aboutpage p{
+  width: 90%;
+  padding-left: 15px;
+}
+
+.aboutpage iframe{
+  width: 100%;
+}
+
+ /*-------------------------------------------
+  FAQ
+  -------------------------------------------*/
+#faq .faqcontent{
+ /* width: 90%;*/
+ 
+ }
+
+#faq .accordion-title{
+  font-size: 0.7rem;
+
+ 
+
+ }
+
+/****************************************
+
+ apply                                                                             
+
+*****************************************/
+
+#applyForm #mainForm {
+  width: 100%;
+  padding:0;
+}
+
+    
+#mainForm tr, #mainForm th, #mainForm td{
+  display: block;
+        
+}
+
+#mainForm tr{
+  text-align: left;
+}
+
+#mainForm th{
+  height: 20px;
+  padding: 0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+#mainForm td{
+  margin: 0 20px 40px 20px;
+ 
+}
+
+#mainFormBtn{
+  width: auto;
+}
+
+
+#mainForm .inputArea{
+  width:100%;
+}
+
+#mainForm select{
+  width: 100%;
+}
+
+#mainForm textarea{
+  width: 100%;
+}
+
+.inputSend {
+  margin:50px auto 0 auto;
+}
+
+
+
+}
+
